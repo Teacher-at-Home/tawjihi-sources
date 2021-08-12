@@ -1,20 +1,25 @@
 # tawjihi-sources
 
-# team members 
+# team members
 
-Mu'men Al-Madaineh (leader) PR owner 
+Mu'men Al-Madaineh (leader) PR owner
 
-sarah Darwish 
+sarah Darwish
 
-mhammad alkhateeb 
+mhammad alkhateeb
 
 Emadeddin Beshtawi  
 
-Sara Kafaween 
+Sara Kafaween
 
 Baraah Hableh
 
-# describe tawjihi sources project 
-
+# describe tawjihi sources project
 
 A website that shows the 3 majors of the secondary School (TAWJIHI) students to save time and provide them the best content in terms of their major.
+
+# wireframe
+
+[wireframe link](https://miro.com/app/board/o9J_l262ICY=/)
+
+![wireframe photo](img/wireframe.jpg);
