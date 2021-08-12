@@ -2,17 +2,17 @@
 
 # team members
 
-Mu'men Al-Madaineh (leader) PR owner
+Mu'men Al-Madaineh (leader) PR owner JAVA SCRIPT
 
-sarah Darwish
+sarah Darwish CSS design
 
-mhammad alkhateeb
+mhammad alkhateeb JAVA SCRIPT
 
-Emadeddin Beshtawi  
+Emadeddin Beshtawi  JAVA SCRIPT
 
-Sara Kafaween
+Sara Kafaween CSS design
 
-Baraah Hableh
+Baraah Hableh HTML and wireframe
 
 # describe tawjihi sources project
 
