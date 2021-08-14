@@ -67,7 +67,7 @@ form.addEventListener('submit',submitHandler);
 function submitHandler(event){
   event.preventDefault();
   console.log(event.target.selectMajor.value);
-//   if(event.target.selectMajor.value === majors[0].majorName){render();}
+  //   if(event.target.selectMajor.value === majors[0].majorName){render();}
 
 
   if(event.target.selectMajor.value === 'Science'){
