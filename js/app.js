@@ -50,7 +50,7 @@ new CreateMajor('Industrial',
 
 if(localStorage.savedMajors){
   localStorage.savedMajors;
-}
+}else {localStorage.savedMajors=0;}
 let returnMajors= JSON.parse(localStorage.savedMajors);
 
 function render(){
@@ -66,7 +66,7 @@ function render(){
     link.href=returnMajors.linkArray[i];}
 
 }
-if(localStorage.savedMajors && localStorage.savedMajors !=0){
+if(localStorage.savedMajors && localStorage.savedMajors !=='0'){
   render();
 }
 
