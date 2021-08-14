@@ -3,6 +3,7 @@ let videos = document.getElementById('videos');
 let links =  document.getElementById('links');
 let form =  document.getElementById('major');
 let selectMajor =  document.getElementById('selectMajor');
+let clear = document.getElementById('clear');
 let majors = [];
 
 
@@ -28,13 +29,13 @@ new CreateMajor('Science',
 );
 
 new CreateMajor('Literature',
-  ['https://www.youtube.com/embed/?v=0rHUDWjR5gg&list=PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL',
+  ['https://www.youtube.com/embed/watch?v=Z0zConOPZ8Y',
     'https://www.youtube.com/embed/?v=L-Wtlev6suc&list=PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL&index=3',
     'https://www.youtube.com/embed/?v=01QWC-rZcfE&list=PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL&index=4',
     'https://www.youtube.com/embed/?v=AQ5vty8f9Xc&list=PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL&index=5'],
   ['https://www.udemy.com',
     'https://fingerprintvideos.net',
-    'https://www.edraak.org','https://www.edraak.org']
+    'https://www.edraak.org','https://www.google.jo']
 );
 
 new CreateMajor('Industrial',
@@ -46,35 +47,49 @@ new CreateMajor('Industrial',
     'https://fingerprintvideos.net',
     'https://www.edraak.org','https://www.edraak.org']
 );
-localStorage.savedMajors = JSON.stringify(majors);
-let returnMajors = JSON.parse(localStorage.savedMajors);
+
+if(localStorage.savedMajors){
+  localStorage.savedMajors;
+}
+let returnMajors= JSON.parse(localStorage.savedMajors);
 
 function render(){
-  for(let i=0;i<majors[0].vidArray.length;i++){
+  for(let i=0;i<returnMajors.vidArray.length;i++){
     let vid = document.createElement('iframe');
     videos.appendChild(vid);
-    vid.src=majors[0].vidArray[i];}
+    vid.src=returnMajors.vidArray[i];}
 
-  for(let i=0;i<majors[0].linkArray.length;i++){
+  for(let i=0;i<returnMajors.linkArray.length;i++){
     let link = document.createElement('a');
     links.appendChild(link);
-    link.textContent=majors[0].linkArray[i].replace('https://', '');
-    link.href=majors[0].linkArray[i];}
+    link.textContent=returnMajors.linkArray[i].replace('https://', '');
+    link.href=returnMajors.linkArray[i];}
 
+}
+if(localStorage.savedMajors && localStorage.savedMajors !=0){
+  render();
 }
 
 form.addEventListener('submit',submitHandler);
+
 function submitHandler(event){
   event.preventDefault();
-  console.log(event.target.selectMajor.value);
-//   if(event.target.selectMajor.value === majors[0].majorName){render();}
+  let option = event.target.selectMajor.value;
 
-
-  if(event.target.selectMajor.value === 'Science'){
-    render();
-  }else if(event.target.selectMajor.value === 'Literature'){
-    render();
-  }else if(event.target.selectMajor.value === 'Industrial'){
-    render();
+  for(let i=0;i<majors.length;i++){
+    if(majors[i].majorName === option){
+      localStorage.savedMajors = JSON.stringify(majors[i]) ;
+      returnMajors = JSON.parse(localStorage.savedMajors);
+      render();
+      console.log(localStorage.savedMajors);
+      form.removeEventListener('submit',submitHandler);
+      location.reload();
+    }
   }
+}
+
+clear.addEventListener('click',clearHandler);
+function clearHandler(event){
+  localStorage.savedMajors = 0;
+  location.reload();
 }
