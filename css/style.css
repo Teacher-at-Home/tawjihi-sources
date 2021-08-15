@@ -3,9 +3,8 @@
 body {  width: 960px;  margin: auto;  font-family: 'Roboto', sans-serif;}
 
 html {
-   background-image: url("/img/background.jpg");
-    background-color: #cccc;
-    background-size: 1100px ;
+    background-color: #ECEFF1;
+    
 }
 header img {
  
@@ -66,36 +65,6 @@ p{
 }
 
 /* contact us */
-main button{
-    width: 300px;
-    height: 100px;
-    margin: 25px 400px;
-    /* background-color: burlywood; */
 
-}
-main button a{
-    text-decoration: none;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: black;
-    font-size: x-large;
-    
-}
 
-#but1{
-    background-color: #4CAF50;
-}
-#but2{
-    background-color: darkorchid;
-}
-#but3{
-    background-color: rgb(67, 4, 94);
-}
-#but4{
-    background-color: #008CBA;
-
-}
-#but5{
-    background-color: firebrick;
-
-}
 
