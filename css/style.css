@@ -47,14 +47,12 @@ footer {
 #h1 {
     text-align: center;
     padding-right: 320px;
-    margin-top: 30px;
     font:bolder;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: xx-large;
 } 
 p{
     font-family: 'Merienda', cursive;
-    margin-top: 30px;
 }
 /* contact us */
 main button{
@@ -89,7 +87,7 @@ main button a{
         grid-template-rows: 100px auto 50px;
         gap: 20px;
 } */
-.header{
+.header1{
     display: grid;
     grid-template-columns: 100px auto;
     align-items: center;
