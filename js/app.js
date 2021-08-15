@@ -8,8 +8,6 @@ let userName = document.getElementById('userName');
 // eslint-disable-next-line no-unused-vars
 let enterName = document.getElementById('enterName');
 let majors = [];
-
-
 let CreateMajor = function (majorName, vidArray = ['video1', 'video2', 'video3', 'video4'], linkArray = ['lectureSrc1', 'lectureSrc2', 'lectureSrc3', 'lectureSrc4']) {
   this.majorName = majorName;
   this.vidArray = vidArray;
@@ -18,7 +16,6 @@ let CreateMajor = function (majorName, vidArray = ['video1', 'video2', 'video3',
   let option = document.createElement('option');
   selectMajor.appendChild(option);
   option.textContent = this.majorName;
-
 };
 new CreateMajor('Science',
   ['https://www.youtube.com/embed/watch?v=FEpgC6pSd44&list=RDCMUCRt_FEebiyPEjm6_Bk6vndA&start_radio=1&rv=FEpgC6pSd44&t=0',
@@ -30,7 +27,6 @@ new CreateMajor('Science',
     ['Bilogy', 'https://www.youtube.com/playlist?list=PLa8IbBityehGPfGRD5a-JAX5AaerEsmXd'],
     ['Physics', 'https://www.youtube.com/playlist?list=PLa8IbBityehHxCUsBCqLVTNFqYiKluf0W']]
 );
-
 new CreateMajor('Literature',
   ['https://www.youtube.com/embed/watch?v=Pb6sMI3Y5uI&list=RDCMUCupmOKDcuHZ_t1r-uys1eGQ&start_radio=1&rv=Pb6sMI3Y5uI&t=2',
     'https://www.youtube.com/embed/watch?v=XuiTkWL3IOM&list=RDCMUCRt_FEebiyPEjm6_Bk6vndA&start_radio=1&rv=XuiTkWL3IOM&t=1',
@@ -41,7 +37,6 @@ new CreateMajor('Literature',
     ['Computer Science', 'https://www.youtube.com/playlist?list=PLCvvxMCAGP8lyop3JZSDk3eswFeI8SKxt'],
     ['Maths', 'https://www.youtube.com/playlist?list=PLsy0ZR3_3NhVyqkB1WhA9g0GQtV_jNOM3']]
 );
-
 new CreateMajor('Industrial',
   ['https://www.youtube.com/embed/watch?v=A7zCOOEBxhU&list=RDCMUCEHvaZ336u7TIsUQ2c6SAeQ&start_radio=1&rv=A7zCOOEBxhU&t=0',
     'https://www.youtube.com/embed/watch?v=XGrGaavKQUI&list=RDCMUCjVHqZ3b3qSOQPU-cYUnrkg&start_radio=1&rv=XGrGaavKQUI&t=2',
@@ -52,37 +47,30 @@ new CreateMajor('Industrial',
     ['Maths', 'https://www.youtube.com/playlist?list=PLa8IbBityehHH4ayUAQX3TJ_HrLms56s6'],
     ['Physics', 'https://www.youtube.com/playlist?list=PLa8IbBityehHxCUsBCqLVTNFqYiKluf0W']]
 );
-
 if (localStorage.savedMajors) {
   localStorage.savedMajors;
 } else { localStorage.savedMajors = 0; }
 let returnMajors = JSON.parse(localStorage.savedMajors);
-
 function render() {
   for (let i = 0; i < returnMajors.vidArray.length; i++) {
     let vid = document.createElement('iframe');
     videos.appendChild(vid);
     vid.src = returnMajors.vidArray[i];
   }
-
   for (let i = 0; i < returnMajors.linkArray.length; i++) {
     let link = document.createElement('a');
     links.appendChild(link);
     link.textContent = returnMajors.linkArray[i][0];
     link.href = returnMajors.linkArray[i][1];
   }
-
 }
 if (localStorage.savedMajors && localStorage.savedMajors !== '0') {
   render();
 }
-
 form.addEventListener('submit', submitHandler);
-
 function submitHandler(event) {
   event.preventDefault();
   let option = event.target.selectMajor.value;
-
   for (let i = 0; i < majors.length; i++) {
     if (majors[i].majorName === option) {
       localStorage.savedMajors = JSON.stringify(majors[i]);
@@ -94,8 +82,9 @@ function submitHandler(event) {
     }
   }
 }
-
 userName.textContent = localStorage.savedName;
+
+
 clear.addEventListener('click', clearHandler);
 function clearHandler() {
   localStorage.savedMajors = 0;
