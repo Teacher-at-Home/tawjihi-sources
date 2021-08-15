@@ -1,6 +1,6 @@
-# tawjihi-sources
+# Tawjihi-sources
 
-# team members
+# Team members
 
 Mu'men Al-Madaineh (leader) PR owner JAVA SCRIPT
 
@@ -14,11 +14,11 @@ Sara Kafaween CSS design
 
 Baraah Hableh HTML and wireframe
 
-# describe tawjihi sources project
+# Describe tawjihi sources project
 
 A website that shows the 3 majors of the secondary School (TAWJIHI) students to save time and provide them the best content in terms of their major.
 
-# wireframe
+# Wireframe
 
 [wireframe link](https://miro.com/app/board/o9J_l262ICY=/)
 
@@ -31,3 +31,5 @@ A website that shows the 3 majors of the secondary School (TAWJIHI) students to 
 3. As a principal, I want to clear the results and show new results, so that I will be able to navigate between different fields results.
 4. As a student, I don't want to be confused with a lot of results about my lecture so that the website will be clear and will give me only best results.
 5. As a user, I want to be able to contact with web page designers so that feedback will be delivered to them.
+
+

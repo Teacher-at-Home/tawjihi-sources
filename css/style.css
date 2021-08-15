@@ -37,13 +37,7 @@ main h2 {
     font-size: x-large;
     font-weight: 1.5 ;
 }
-footer {
-    display: flex;  
-    align-items: center;  
-    justify-content: center;  
-    text-transform: capitalize;
-    margin-top: 100px;
-}
+
 #h1 {
     text-align: center;
     padding-right: 320px;
@@ -51,8 +45,9 @@ footer {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: xx-large;
 } 
-p{
+.par1{
     font-family: 'Merienda', cursive;
+    padding-left: 400px;
 }
 /* contact us */
 main button{
@@ -134,21 +129,83 @@ main{
 }
 .videos{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
     gap: 70px;
-    margin-right: 100px;
-    margin-left: 100px;
+    margin-left: 15px;
     margin-top: 50px;
+    margin-right: 45px;
+    margin-bottom: 70px;
 }
-#links{
-    display: grid;
-    grid-template-columns: auto;
-     margin: 50px auto;  
+#links {
+    display: inline;
+ 
+ 
 }
+#links a {
+    padding-left: 60px;
+    padding-right: 60px;
+    color:white;
+    text-decoration: none;
+    background-color:rgb(18, 18, 78);
+}
+
+#links a:hover{
+    color:rgb(238, 153, 17) ;
+
+} 
 input,#selectMajor {
     width: 250px;
     height: 25px;
 }
 #submit ,#clear{
     margin-left: 55px;
+}
+.body1{
+    display: grid;
+    grid-template-rows: 100px 400px 50px ;
+   
+}
+.maincontact{
+    display: grid;
+    grid-template-rows: auto anuto ;
+}
+.contactus{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+.contactus img{
+    padding-left: 25px;
+    padding-right: 20px;
+}
+
+
+footer {
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+    text-transform: capitalize;
+    margin-top: 100px;
+}
+.p{
+    padding-left: 75px;
+    font-weight: 3;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    line-height: 25px;
+}
+
+.mainP{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+   
+}
+iframe{
+    width: 420px;
+    height: 350px;
+
 }
