@@ -4,6 +4,8 @@ let links =  document.getElementById('links');
 let form =  document.getElementById('major');
 let selectMajor =  document.getElementById('selectMajor');
 let clear = document.getElementById('clear');
+let userName = document.getElementById('userName');
+let enterName  = document.getElementById('enterName');
 let majors = [];
 
 
@@ -19,7 +21,7 @@ let CreateMajor = function (majorName,vidArray=['video1', 'video2', 'video3', 'v
 
 };
 new CreateMajor('Science',
-  ['https://www.youtube.com/embed/?v=0rHUDWjR5gg&list=PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL',
+  ['https://www.youtube.com/embed/?v=FEpgC6pSd44',
     'https://www.youtube.com/embed/?v=L-Wtlev6suc&list=PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL&index=3',
     'https://www.youtube.com/embed/?v=01QWC-rZcfE&list=PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL&index=4',
     'https://www.youtube.com/embed/?v=AQ5vty8f9Xc&list=PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL&index=5'],
@@ -81,15 +83,16 @@ function submitHandler(event){
       localStorage.savedMajors = JSON.stringify(majors[i]) ;
       returnMajors = JSON.parse(localStorage.savedMajors);
       render();
-      console.log(localStorage.savedMajors);
+      localStorage.savedName = event.target.enterName.value;
       form.removeEventListener('submit',submitHandler);
       location.reload();
     }
   }
 }
 
+userName.textContent = localStorage.savedName;
 clear.addEventListener('click',clearHandler);
-function clearHandler(event){
+function clearHandler(){
   localStorage.savedMajors = 0;
   location.reload();
 }
