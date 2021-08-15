@@ -69,7 +69,7 @@ main button a{
     color: black;
     font-size: x-large;
 }
-#but1{
+/* #but1{
     background-color: #4CAF50;
 }
 #but2{
@@ -83,7 +83,7 @@ main button a{
 }
 #but5{
     background-color: firebrick;
-}
+} */
 /* #body1{
         display: grid;
         grid-template-rows: 100px auto 50px;
