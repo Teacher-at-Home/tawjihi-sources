@@ -4,6 +4,9 @@ let links = document.getElementById('links');
 let form = document.getElementById('major');
 let selectMajor = document.getElementById('selectMajor');
 let clear = document.getElementById('clear');
+let userName = document.getElementById('userName');
+// eslint-disable-next-line no-unused-vars
+let enterName = document.getElementById('enterName');
 let majors = [];
 let CreateMajor = function (majorName, vidArray = ['video1', 'video2', 'video3', 'video4'], linkArray = ['lectureSrc1', 'lectureSrc2', 'lectureSrc3', 'lectureSrc4']) {
   this.majorName = majorName;
@@ -15,31 +18,34 @@ let CreateMajor = function (majorName, vidArray = ['video1', 'video2', 'video3',
   option.textContent = this.majorName;
 };
 new CreateMajor('Science',
-  ['https://www.youtube.com/embed/?v=0rHUDWjR5gg&list=PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL',
-    'https://www.youtube.com/embed/?v=L-Wtlev6suc&list=PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL&index=3',
-    'https://www.youtube.com/embed/?v=01QWC-rZcfE&list=PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL&index=4',
-    'https://www.youtube.com/embed/?v=AQ5vty8f9Xc&list=PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL&index=5'],
-  ['https://www.udemy.com',
-    'https://fingerprintvideos.net',
-    'https://www.edraak.org', 'https://www.edraak.org']
+  ['https://www.youtube.com/embed/watch?v=FEpgC6pSd44&list=RDCMUCRt_FEebiyPEjm6_Bk6vndA&start_radio=1&rv=FEpgC6pSd44&t=0',
+    'https://www.youtube.com/embed/watch?v=vWnetGodwVE&list=RDCMUCRt_FEebiyPEjm6_Bk6vndA&start_radio=1&rv=vWnetGodwVE&t=2',
+    'https://www.youtube.com/embed/watch?v=8sb8p0gDV_0&list=RDCMUCRt_FEebiyPEjm6_Bk6vndA&start_radio=1&rv=8sb8p0gDV_0&t=0',
+    'https://www.youtube.com/embed/watch?v=p9rVT1YazN4&list=RDCMUCa7sO8mFcUB4Lvvih-rvt7g&start_radio=1&rv=p9rVT1YazN4&t=1'],
+  [['Math', 'https://www.youtube.com/playlist?list=PLa8IbBityehHH4ayUAQX3TJ_HrLms56s6'],
+    ['Chemistry', 'https://www.youtube.com/playlist?list=PLa8IbBityehFIsAEQ5wdffL7xWtSjs_9D'],
+    ['Bilogy', 'https://www.youtube.com/playlist?list=PLa8IbBityehGPfGRD5a-JAX5AaerEsmXd'],
+    ['Physics', 'https://www.youtube.com/playlist?list=PLa8IbBityehHxCUsBCqLVTNFqYiKluf0W']]
 );
 new CreateMajor('Literature',
-  ['https://www.youtube.com/embed/watch?v=Z0zConOPZ8Y',
-    'https://www.youtube.com/embed/?v=L-Wtlev6suc&list=PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL&index=3',
-    'https://www.youtube.com/embed/?v=01QWC-rZcfE&list=PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL&index=4',
-    'https://www.youtube.com/embed/?v=AQ5vty8f9Xc&list=PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL&index=5'],
-  ['https://www.udemy.com',
-    'https://fingerprintvideos.net',
-    'https://www.edraak.org', 'https://www.google.jo']
+  ['https://www.youtube.com/embed/watch?v=Pb6sMI3Y5uI&list=RDCMUCupmOKDcuHZ_t1r-uys1eGQ&start_radio=1&rv=Pb6sMI3Y5uI&t=2',
+    'https://www.youtube.com/embed/watch?v=XuiTkWL3IOM&list=RDCMUCRt_FEebiyPEjm6_Bk6vndA&start_radio=1&rv=XuiTkWL3IOM&t=1',
+    'https://www.youtube.com/embed/watch?v=VWhEIqyNFx8&list=RDCMUCEHvaZ336u7TIsUQ2c6SAeQ&start_radio=1&rv=VWhEIqyNFx8&t=0',
+    'https://www.youtube.com/embed/watch?v=RsIblKl1kNg&list=RDCMUC1GFfLv_emQUDUMpu8XDLdQ&start_radio=1&rv=RsIblKl1kNg&t=2'],
+  [['English', 'https://www.youtube.com/playlist?list=PLa8IbBityehH3hlqQ86bHd9pFL9_TrhCQ'],
+    ['Arabic', 'https://www.youtube.com/playlist?list=PLa8IbBityehGqiw-xae3i3O7SqEwup803'],
+    ['Computer Science', 'https://www.youtube.com/playlist?list=PLCvvxMCAGP8lyop3JZSDk3eswFeI8SKxt'],
+    ['Maths', 'https://www.youtube.com/playlist?list=PLsy0ZR3_3NhVyqkB1WhA9g0GQtV_jNOM3']]
 );
 new CreateMajor('Industrial',
-  ['https://www.youtube.com/embed/?v=0rHUDWjR5gg&list=PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL',
-    'https://www.youtube.com/embed/?v=L-Wtlev6suc&list=PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL&index=3',
-    'https://www.youtube.com/embed/?v=01QWC-rZcfE&list=PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL&index=4',
-    'https://www.youtube.com/embed/?v=AQ5vty8f9Xc&list=PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL&index=5'],
-  ['https://www.udemy.com',
-    'https://fingerprintvideos.net',
-    'https://www.edraak.org', 'https://www.edraak.org']
+  ['https://www.youtube.com/embed/watch?v=A7zCOOEBxhU&list=RDCMUCEHvaZ336u7TIsUQ2c6SAeQ&start_radio=1&rv=A7zCOOEBxhU&t=0',
+    'https://www.youtube.com/embed/watch?v=XGrGaavKQUI&list=RDCMUCjVHqZ3b3qSOQPU-cYUnrkg&start_radio=1&rv=XGrGaavKQUI&t=2',
+    'https://www.youtube.com/embed/watch?v=YvXTMs-MfrQ&list=RDCMUCGaFIObIzWA3Cg0BrB4HBAg&start_radio=1&rv=YvXTMs-MfrQ&t=1',
+    'https://www.youtube.com/embed/watch?v=b9Ep-0GchTY&list=RDCMUC1XJWy7kVElm4tzHnZtGszg&start_radio=1&rv=b9Ep-0GchTY&t=0'],
+  [['Drawing', 'https://www.youtube.com/playlist?list=PLtO2df0ZfbQ1_31_cbhiP373c-rPZA_EO'],
+    ['Industrial Science', 'https://www.youtube.com/playlist?list=PLtO2df0ZfbQ2HScPeHNplfv-fDv2LPVWd'],
+    ['Maths', 'https://www.youtube.com/playlist?list=PLa8IbBityehHH4ayUAQX3TJ_HrLms56s6'],
+    ['Physics', 'https://www.youtube.com/playlist?list=PLa8IbBityehHxCUsBCqLVTNFqYiKluf0W']]
 );
 if (localStorage.savedMajors) {
   localStorage.savedMajors;
@@ -54,8 +60,8 @@ function render() {
   for (let i = 0; i < returnMajors.linkArray.length; i++) {
     let link = document.createElement('a');
     links.appendChild(link);
-    link.textContent = returnMajors.linkArray[i].replace('https://', '');
-    link.href = returnMajors.linkArray[i];
+    link.textContent = returnMajors.linkArray[i][0];
+    link.href = returnMajors.linkArray[i][1];
   }
 }
 if (localStorage.savedMajors && localStorage.savedMajors !== '0') {
@@ -69,15 +75,18 @@ function submitHandler(event) {
     if (majors[i].majorName === option) {
       localStorage.savedMajors = JSON.stringify(majors[i]);
       returnMajors = JSON.parse(localStorage.savedMajors);
-      render();
-      console.log(localStorage.savedMajors);
-      form.removeEventListener('submit', submitHandler);
+      if (!localStorage.savedName || event.target.enterName.value) {
+        localStorage.savedName = event.target.enterName.value;
+      }
       location.reload();
     }
   }
 }
+userName.textContent = localStorage.savedName;
+
+
 clear.addEventListener('click', clearHandler);
-function clearHandler(event) {
+function clearHandler() {
   localStorage.savedMajors = 0;
   location.reload();
 }
