@@ -30,7 +30,7 @@ new CreateMajor('Science',
     ['Physics', 'https://www.youtube.com/playlist?list=PLa8IbBityehHxCUsBCqLVTNFqYiKluf0W']]
 );
 
-new CreateMajor('Literature',
+new CreateMajor('Arts',
   ['https://www.youtube.com/embed/watch?v=Pb6sMI3Y5uI&list=RDCMUCupmOKDcuHZ_t1r-uys1eGQ&start_radio=1&rv=Pb6sMI3Y5uI&t=2',
     'https://www.youtube.com/embed/watch?v=XuiTkWL3IOM&list=RDCMUCRt_FEebiyPEjm6_Bk6vndA&start_radio=1&rv=XuiTkWL3IOM&t=2',
     'https://www.youtube.com/embed/watch?v=VWhEIqyNFx8&list=RDCMUCEHvaZ336u7TIsUQ2c6SAeQ&start_radio=1&rv=VWhEIqyNFx8&t=0',
