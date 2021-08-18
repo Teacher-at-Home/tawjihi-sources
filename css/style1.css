@@ -12,6 +12,8 @@ html {
 header nav a {
     text-decoration: none;
     float: right;
+    color:rgb(192, 143, 7);
+  
 }
 main section div img{
     width: 100%;
@@ -30,12 +32,14 @@ header {
     padding: 0 20px;
     margin-bottom: 50px;
     align-content: center;
-    
+    background-color: rgb(25, 23, 53);
+    margin-top: 25px;
 }
 header img {
     float: left;
     width: 100px;
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 main h2 {
     font:bolder;
@@ -68,7 +72,9 @@ main button a{
     color: black;
     font-size: x-large;
 }
-
+.header{
+    height: 150px;
+}
 .header1{
     display: grid;
     grid-template-columns: 100px auto;
@@ -76,16 +82,18 @@ main button a{
     justify-content: space-between;
     padding: 0 30px;
     margin-bottom: 25px;
+    height: 150px;
 }
 header nav a{
     text-decoration: none;
-    color: #000;
-    padding: 10px 30px;
+    color: rgb(192, 143, 7);
+    padding: 0px 30px;
     text-transform: uppercase;
     position: relative;
     transition: all 350ms;
     float: left;
     margin-top: 40px;
+    margin-bottom: 30px;
 }
 main div{
 
@@ -126,8 +134,9 @@ main{
 #links {
     display:grid;
     grid-template-columns: auto auto auto auto ;
-   width: 100%;
-   background-color:rgb(18, 18, 78);
+     width: 100%;
+     color: rgb(192, 143, 7);
+     background-color: rgb(25, 23, 53);
  }
 #links a {
    color:white;
@@ -163,7 +172,9 @@ input,#selectMajor {
 }
 .maincontact{
     display: grid;
-    grid-template-rows: auto anuto ;
+    grid-template-rows: auto 1fr 100px ;
+    margin-top: 100px;
+    margin-bottom: 150px;
 }
 .contactus{
     text-align: center;
@@ -171,6 +182,7 @@ input,#selectMajor {
     justify-content: center;
     align-items: center;
     margin-top: 60px;
+    margin-bottom: 150px;
 }
 .contactus img{
     padding-left: 25px;
@@ -184,6 +196,15 @@ footer {
     justify-content: center;  
     text-transform: capitalize;
     margin-top: 100px;
+    background-color: rgb(25, 23, 53);
+    margin-bottom: 200px;
+  
+
+}
+footer p {
+    color: rgb(192, 143, 7);
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 .p{
     padding-left: 75px;
@@ -197,7 +218,9 @@ footer {
     align-items: center;  
     justify-content: center;  
     text-transform: capitalize;
-    margin-top:350px;  
+    margin-top:350px; 
+    background-color: rgb(25, 23, 53);
+    height: 100px;
 }
 .mainP{
     padding-top: 20px;
