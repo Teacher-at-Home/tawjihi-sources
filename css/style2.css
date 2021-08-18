@@ -16,7 +16,9 @@ header{
 header img{
     float: left;
     width: 100px;
-    margin-top: 30px;}
+    margin-top: 30px;
+margin-bottom: 30px;
+}
 header nav a{
     text-decoration: none;
     color:rgb(192, 143, 7);
