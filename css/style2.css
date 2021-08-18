@@ -19,13 +19,15 @@ header img{
     margin-top: 30px;}
 header nav a{
     text-decoration: none;
-    color: #000;
+    color:rgb(192, 143, 7);
+
     padding: 10px 30px;
     text-transform: uppercase;
     position: relative;
     transition: all 350ms;
     float: left;
     margin-top: 40px;
+    margin-bottom: 30px;
 }
 main section section{
     display: grid;
@@ -76,6 +78,9 @@ footer {
     justify-content: center;  
     text-transform: capitalize;
     margin-top: 100px;
+    background-color: rgb(25, 23, 53);
+    margin-bottom: 200px;
+    height: 100px;
 }
 h1 {
     /* text-align: center; */
@@ -83,5 +88,21 @@ h1 {
     font:bolder;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: xxx-large;
-    color: #0000e4;
+    color:rgb(25, 23, 53);
 } 
+header { 
+    display: flex;  
+    align-items: center;  
+    justify-content: space-between;  
+    padding: 0 20px;
+    margin-bottom: 50px;
+    align-content: center;
+    background-color: rgb(25, 23, 53);
+    margin-top: 25px;
+    height: 150px;
+}
+footer p {
+    color: rgb(192, 143, 7);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
